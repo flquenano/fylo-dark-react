@@ -93,6 +93,10 @@
     }
     &-item {
       padding-bottom: 1rem;
+      &:hover {
+        color: $accent-cyan;
+        cursor: pointer;
+      }
       @include md {
         &:not(:last-child) {
           margin-right: 5rem;
@@ -108,9 +112,16 @@
       width: 15rem;
       align-items: center;
     }
-    i:not(:last-child) {
-      padding-right: 1rem;
+    i {
+      &:not(:last-child) {
+        padding-right: 1rem;
+      }
+      &:hover {
+        color: $accent-cyan;
+        cursor: pointer;
+      }
     }
+
     margin-bottom: 2rem;
   }
 }
