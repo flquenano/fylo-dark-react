@@ -1,0 +1,53 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.intro {
+  background: url("assets/images/bg-curvy-mobile.svg") bottom 175px center /
+      100% 25% no-repeat,
+    linear-gradient(to bottom, $primary-intro 65%, $primary-bg 65%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-bottom: 8rem;
+  @include tablet-ls {
+    background: $primary-intro url("assets/images/bg-curvy-desktop.svg") bottom
+      center / 100% 449px no-repeat;
+  }
+  &__display {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    &-img {
+      position: relative;
+      width: clamp(25rem, 80%, 45rem);
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-heading {
+      width: clamp(22rem, 90%, 45rem);
+      margin-bottom: 1rem;
+      text-align: center;
+      @include tablet-ls {
+        margin-bottom: 2rem;
+      }
+    }
+    &-text {
+      line-height: 21px;
+      margin-bottom: 2rem;
+      text-align: center;
+      width: clamp(18rem, 80%, 38rem);
+      @include md {
+        max-width: 675px;
+        position: relative;
+        margin: 0 auto 2rem;
+        font-size: 1.25rem;
+        line-height: 30px;
+      }
+    }
+  }
+}

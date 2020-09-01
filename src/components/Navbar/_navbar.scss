@@ -1,0 +1,35 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.nav {
+  background: $primary-intro;
+  padding: 1.5rem 1.25rem 3.1rem;
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+    width: 5rem;
+  }
+  &__item {
+    display: inline;
+
+    &:not(:last-child) {
+      padding-right: 1rem;
+      font-size: 0.8125rem;
+    }
+  }
+
+  @include md {
+    align-items: center;
+    padding: 4.5rem 5rem 5rem;
+    &__logo {
+      width: 11rem;
+    }
+    &__item {
+      font-size: 1rem;
+      &:not(:last-child) {
+        padding-right: 3.25rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}

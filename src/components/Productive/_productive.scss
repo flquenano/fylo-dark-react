@@ -1,0 +1,71 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.productive {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+  @include md {
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+  &__img {
+    width: clamp(18rem, 80%, 37rem);
+    margin-bottom: 3rem;
+    @include md {
+      width: 39rem;
+    }
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: clamp(18rem, 85%, 35rem);
+    @include md {
+      margin-left: 2.5rem;
+    }
+  }
+  &__heading {
+    font-family: $font-raleway;
+    font-weight: $font-bold;
+    letter-spacing: 0.2px;
+    font-size: 1.125rem;
+    line-height: 36px;
+    padding-left: 0.25rem;
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+    @include md {
+      font-size: 2.5rem;
+      max-width: 25rem;
+      line-height: 50px;
+      padding-bottom: 0.75rem;
+    }
+  }
+  &__text {
+    font-size: 0.83rem;
+    line-height: 22px;
+    margin-bottom: 0.75rem;
+    @include md {
+      font-size: 1rem;
+      line-height: 25px;
+      max-width: 35rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+  &__link {
+    align-self: flex-start;
+    border-bottom: 1px solid $accent-cyan;
+    color: $accent-cyan;
+    font-size: 0.75rem;
+    padding-bottom: 0.25rem;
+    text-decoration: none;
+    @include md {
+      font-size: 1.025rem;
+    }
+  }
+}

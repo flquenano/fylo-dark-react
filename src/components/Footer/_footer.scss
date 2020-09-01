@@ -1,0 +1,116 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.footer {
+  // padding-top: 13rem
+  background: $primary-footer;
+  padding-top: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include md {
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    @include md {
+      width: 85%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+
+    @include md {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 85%;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+  &__location {
+    max-width: 500px;
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    &-icon {
+      margin-top: 0.5rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    &-text {
+      padding: 0 1rem;
+      padding-left: 1rem;
+      font-size: 0.9rem;
+      line-height: 25px;
+      letter-spacing: 0.25px;
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    &-text {
+      padding-left: 1rem;
+    }
+  }
+
+  &__email {
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+    &-text {
+      padding-left: 1rem;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    @include md {
+      flex-direction: row;
+    }
+    &-list {
+      font-size: 1rem;
+      &:first-child {
+        padding-bottom: 2rem;
+      }
+    }
+    &-item {
+      padding-bottom: 1rem;
+      @include md {
+        &:not(:last-child) {
+          margin-right: 5rem;
+        }
+      }
+    }
+  }
+  &__sns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @include md {
+      width: 15rem;
+      align-items: center;
+    }
+    i:not(:last-child) {
+      padding-right: 1rem;
+    }
+    margin-bottom: 2rem;
+  }
+}

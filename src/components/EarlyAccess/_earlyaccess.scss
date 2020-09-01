@@ -1,0 +1,74 @@
+@import "scss/variables";
+@import "scss/mixins";
+
+.early-access {
+  width: clamp(340px, 70%, 850px);
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $primary-intro;
+  transform: translateY(50%);
+  padding: 2rem 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+
+  &__heading {
+    letter-spacing: -0.1px;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+    @include md {
+      padding-top: 1rem;
+      font-size: 2rem;
+      letter-spacing: -0.5px;
+    }
+  }
+  &__text {
+    font-size: 0.8125rem;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    margin-bottom: 2rem;
+    @include md {
+      position: relative;
+      margin: 0 auto;
+      max-width: 40rem;
+      padding-bottom: 1.25rem;
+    }
+  }
+
+  &__send-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    @include md {
+      flex-direction: row;
+    }
+  }
+
+  .txtbox {
+    height: 2.75rem;
+    border: none;
+    border-radius: 25px;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    padding-left: 2rem;
+    @include md {
+      width: clamp(16rem, 30rem, 80%);
+      padding-right: 2rem;
+    }
+  }
+  .btn {
+    padding: 1rem 0;
+    width: 100%;
+    white-space: nowrap;
+    margin-bottom: 1rem;
+    @include md {
+      font-size: 0.9rem;
+      padding: 0.9rem 1.5rem;
+      margin-left: 1rem;
+      width: 30%;
+    }
+  }
+}

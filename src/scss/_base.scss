@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+ol,
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: $font-openSans;
+  font-size: $font-size;
+  color: $neutral-white;
+}
+
+#root {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  box-shadow: -5px 0 10px rgb(211, 211, 211), 5px 0 10px rgb(211, 211, 211);
+  background: $primary-bg;
+}
